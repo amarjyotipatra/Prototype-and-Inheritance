@@ -1,0 +1,145 @@
+Chrome Console======>
+
+Object
+ƒ Object() { [native code] }
+Object()
+{}[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+Object.prototype
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+Object.prototype.constructor
+ƒ Object() { [native code] }
+function Product(n,p){}
+undefined
+function Product(n,p){}
+undefined
+function Product(n,p){}
+undefined
+function Product(n){this.name=n}
+undefined
+Product
+ƒ Product(n){this.name=n}
+Product()
+undefined
+Product("phone")
+undefined
+Product.prototype.constructor
+ƒ Product(n){this.name=n}
+const iphone=new Product("Iphone 14 Pro")
+undefined
+iphone.name
+'Iphone 14 Pro'
+Product.prototype.display=function (){
+        console.log(this.name)
+}
+ƒ (){
+        console.log(this.name)
+}
+iphone.name
+'Iphone 14 Pro'
+iphone.display
+ƒ (){
+        console.log(this.name)
+}
+    iphone.display()
+VM892:2 Iphone 14 Pro
+undefined
+iphone.toString()
+'[object Object]'
+iphone.valueOf()
+Product {name: 'Iphone 14 Pro'}
+Pro
+VM1056:1 Uncaught ReferenceError: Pro is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1056:1
+Product.valueOf()
+ƒ Product(n){this.name=n}
+class Phone {
+    constructor(n,p) {
+        this.name=n;
+        this.price=p;
+    }
+}
+undefined
+Phone.prototype.constructor
+class Phone {
+    constructor(n,p) {
+        this.name=n;
+        this.price=p;
+    }
+}
+const myPhone=new Phone("Mi 11 X",26500)
+undefined
+myPhone
+Phone {name: 'Mi 11 X', price: 26500}
+Product.__proto__
+ƒ () { [native code] }
+Product.__proto__()
+undefined
+Product.__proto__.name
+''
+iphone.__proto__
+{display: ƒ, constructor: ƒ}
+iphone.__proto__.constructor
+ƒ Product(n){this.name=n}
+Ph
+VM1501:1 Uncaught ReferenceError: Ph is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1501:1
+Phone.__proto__
+ƒ () { [native code] }
+Phone.__proto__==Phone.prototype
+false
+myPhone.__proto__
+{constructor: ƒ}constructor: class Phone[[Prototype]]: Object
+myPhone.__proto__.constructor
+class Phone {
+    constructor(n,p) {
+        this.name=n;
+        this.price=p;
+    }
+}
+class Cat {
+    constructor(c) {
+        this.category=c;
+    }
+}
+undefined
+class Pro extends Cat {
+    constructor(n,c) {
+        super(c)
+        this.name=n;
+    }
+}
+undefined
+const newProd=Pro("Mi 11 X","phone")
+newProd.__proto__
+Cat {constructor: ƒ}constructor: class Pro[[Prototype]]: Objectconstructor: class Cat[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: Objectconstructor: class Cat[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: nullget __proto__: ƒ __proto__()set __proto__: ƒ __proto__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+newProd.__proto__.constructor
+class Pro extends Cat {
+    constructor(n,c) {
+        super(c)
+        this.name=n;
+    }
+}
+
+
+function A() {}
+undefined
+A.prototype.fun=function () {
+    console.log("Checking prototype")
+}
+ƒ () {
+    console.log("Checking prototype")
+}
+function B() {}
+undefined
+Object.setPrototypeOf(B.prototype,A.prototype)
+A {constructor: ƒ}
+let x=new B()
+undefined
+x.fun
+ƒ () {
+    console.log("Checking prototype")
+}
+x.fun()
+VM2894:2 Checking prototype
